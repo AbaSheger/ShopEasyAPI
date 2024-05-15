@@ -1,40 +1,41 @@
 package com.example.ShopEasyAPI.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "orders")
 public class Order {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long userID;
+    private Long userId;
     private Long productID;
     private Integer quantity;
     private LocalDate orderDate;
 
 
+
     public Order() {
     }
 
-    public Order(Long id, Long userID, Long productID, Integer quantity, LocalDate orderDate) {
+    public Order(Long id, Long userId, Long productID, Integer quantity, LocalDate orderDate) {
         this.id = id;
-        this.userID = userID;
+        this.userId = userId;
         this.productID = productID;
         this.quantity = quantity;
         this.orderDate = orderDate;
     }
 
-    public Long getUserID() {
-        return userID;
+
+
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setUserID(Long userID) {
-        this.userID = userID;
+    public void setUserId(Long userID) {
+        this.userId = userID;
     }
 
     public Long getProductID() {

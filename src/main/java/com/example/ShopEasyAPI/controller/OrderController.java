@@ -16,7 +16,7 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    @GetMapping ("/{userId")
+    @GetMapping ("/{userId}")
     @PreAuthorize("hasRole('USER')")
     public List<Order> getUserOrders(@PathVariable Long userId) {
         return orderService.getOrdersByUserId(userId);
