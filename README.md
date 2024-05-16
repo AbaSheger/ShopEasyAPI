@@ -1,5 +1,4 @@
-markdown
-Copy code
+
 # ShopEasyAPI
 
 ## Description
@@ -14,6 +13,7 @@ ShopEasyAPI is a simple Spring Boot application providing a RESTful API for e-co
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/AbaSheger/ShopEasyAPI.git
+```
 ### 2. Build and run the application
 bash
 Copy code
